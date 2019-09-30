@@ -2,8 +2,10 @@
 # WikiRandom: 
 Microservicio que te permitirá compartir u obtener una imagen aleatoria.
 Se desplegará una interfaz muy sencilla que permitirá subir a una base de datos común, una imagen o link. Se podrá pedir una imagen aleatoria.
+
 ## Instrucciones de uso
 En desarrollo.
+
 ## Detalles de la implementación
 #### Lenguaje de la aplicación
 - [Python](www.python.org)
