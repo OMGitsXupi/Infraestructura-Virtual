@@ -1,7 +1,7 @@
 import pytest
 from hola import Hola
 
-def suma(x)
+def suma(x):
 	return x+1
 
 def test_suma():
