@@ -4,3 +4,5 @@ Como Python no necesita una herramienta de construcción, usaré el módulo de p
 - "fab install" instala lo necesario según el archivo [requeriments.txt](https://github.com/OMGitsXupi/WikiRandom/blob/master/requirements.txt)
 - "fab main" ejecuta la aplicación
 - "fab test" ejecuta los tests
+
+Usaré la versión de Fabric3
