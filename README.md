@@ -4,11 +4,11 @@ Microservicio que te permitirá compartir u obtener una imagen aleatoria.
 Se permitirá subir a una base de datos común, una imagen o link. Se podrá pedir una imagen aleatoria.
 
 ## :page_with_curl: Instrucciones
-### Instalación
+#### Instalación
 `fab install`
-### Usar la aplicación
+#### Usar la aplicación
 `fab main`
-### Testear (desarrollo)
+#### Testear (desarrollo)
 `fab test`
 
 ## :building_construction: Detalles de la implementación
@@ -17,9 +17,9 @@ Se permitirá subir a una base de datos común, una imagen o link. Se podrá ped
 #### Base de Datos
 - [MongoDB](https://www.mongodb.com)
 #### Herramienta de construcción
-- [Fabric](http://www.fabfile.org) ([Detalles](explicaciones/travis.md))
+- [Fabric](http://www.fabfile.org) :arrow_right: ([Detalles](explicaciones/fabric.md))
 #### Integración continua
-- [Travis](https://travis-ci.org/)
+- [Travis](https://travis-ci.org/) :arrow_right: ([Detalles](explicaciones/travis.md))
 #### Sistema de logs
 - [Logging facility for Python](https://docs.python.org/3/library/logging.html)
 #### Plataforma en la nube
