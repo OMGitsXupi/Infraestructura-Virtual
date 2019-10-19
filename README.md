@@ -1,9 +1,9 @@
-[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
-# WikiRandom: 
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0) [![Build Status](https://travis-ci.com/OMGitsXupi/WikiRandom.svg?branch=master)](https://travis-ci.com/OMGitsXupi/WikiRandom)
+# :computer: WikiRandom:
 Microservicio que te permitirá compartir u obtener una imagen aleatoria.
 Se permitirá subir a una base de datos común, una imagen o link. Se podrá pedir una imagen aleatoria.
 
-## Instrucciones
+## :page_with_curl: Instrucciones
 ### Instalación
 `fab install`
 ### Usar la aplicación
@@ -11,16 +11,16 @@ Se permitirá subir a una base de datos común, una imagen o link. Se podrá ped
 ### Testear (desarrollo)
 `fab test`
 
-## Detalles de la implementación
+## :building_construction: Detalles de la implementación
 #### Lenguaje de la aplicación
 - [Python](www.python.org)
 #### Base de Datos
 - [MongoDB](https://www.mongodb.com)
-#### Sistema de logs
-- [Logging facility for Python](https://docs.python.org/3/library/logging.html)
 #### Herramienta de construcción
-- [Fabric](http://www.fabfile.org)
+- [Fabric](http://www.fabfile.org) ([Detalles](explicaciones/travis.md))
 #### Integración continua
 - [Travis](https://travis-ci.org/)
+#### Sistema de logs
+- [Logging facility for Python](https://docs.python.org/3/library/logging.html)
 #### Plataforma en la nube
 - [Heroku](https://www.heroku.com/)
