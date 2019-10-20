@@ -9,3 +9,4 @@ def test():
 
 def install():
     local("pip install -r requirements.txt")
+
