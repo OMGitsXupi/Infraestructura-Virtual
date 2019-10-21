@@ -5,7 +5,8 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        python: [ '2.7', '3.7', 'pypy3' ]
+        python: [ '2.7', '3.7']
+        fabric3: ['1.14']
     steps:
       - uses: actions/checkout@master
       - name: Setup python
