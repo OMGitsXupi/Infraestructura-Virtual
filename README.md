@@ -27,5 +27,5 @@ Se permitirá subir a una base de datos común, una imagen o link. Se podrá ped
 - [Heroku](https://www.heroku.com/)
 
 ## :bookmark_tabs: Documentación extra
-- ([Herramienta de construcción](explicaciones/fabric.md))
-- ([Integración continua](explicaciones/CI.md))
+- [Herramienta de construcción](explicaciones/fabric.md)
+- [Integración continua](explicaciones/CI.md)
