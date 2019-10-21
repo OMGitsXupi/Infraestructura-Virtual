@@ -28,4 +28,4 @@ Se permitirá subir a una base de datos común, una imagen o link. Se podrá ped
 
 ## :bookmark_tabs: Documentación extra
 - ([Herramienta de construcción](explicaciones/fabric.md))
-- ([Integración continua](explicaciones/travis.md))
+- ([Integración continua](explicaciones/CI.md))
