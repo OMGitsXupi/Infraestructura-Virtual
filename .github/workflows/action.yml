@@ -1,10 +1,11 @@
+name: WikiRandom
+on: [push]
 jobs:
   build:
     runs-on: ubuntu-latest
     strategy:
       matrix:
         python: [ '2.7', '3.7', 'pypy3' ]
-    name: WikiRandom
     steps:
       - uses: actions/checkout@master
       - name: Setup python
