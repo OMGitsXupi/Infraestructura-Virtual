@@ -5,7 +5,8 @@ Se permitirá subir a una base de datos común, una imagen o link. Se podrá ped
 
 ## :page_with_curl: Instrucciones
 #### Instalación
-`fab install`
+- Si tenemos instalado 'Fabric3': `fab install`
+- Si no (usaremos 'pip'): `pip install -r requirements.txt`
 #### Usar la aplicación
 `fab main`
 #### Testear (desarrollo)
