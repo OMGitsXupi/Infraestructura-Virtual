@@ -14,5 +14,5 @@ jobs:
           python-version: ${{ matrix.python }}
           architecture: x64
       - run: |
-          fab install
+          pip install -r requirements.txt
           fab test
