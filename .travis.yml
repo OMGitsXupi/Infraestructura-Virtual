@@ -12,3 +12,4 @@ script:
   - fab test
   - fab start
   - fab status
+  - sudo cat /tmp/wikirandom/wikirandoms_err.log
