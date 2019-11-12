@@ -9,3 +9,5 @@ install:
 
 script:
   - fab test
+  - fab start
+  - fab status
