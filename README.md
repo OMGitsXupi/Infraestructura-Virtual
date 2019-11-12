@@ -19,3 +19,4 @@ Microservicio que te permitirá obtener una imagen aleatoria (en forma de link) 
 - #### [Explicaciones](explicaciones/README.md)
 - [Servicio (gunicorn + supervisor](explicaciones/servicio.md)
 - [API REST (con tests)](explicaciones/apirest.md)
+- Buildtool: fabfile
