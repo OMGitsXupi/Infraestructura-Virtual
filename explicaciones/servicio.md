@@ -28,3 +28,5 @@ El script que ejecuta es el siguiente:
 gunicorn --chdir /tmp/wikirandom/my_app wsgi:app
 ```
 Podemos ver que la ubicación puesta para el proyecto es _fab start_, porque es necesaria una dirección absoluta ya que el archivo de configuración de supervisor se copia en _/etc/supervisor/conf.d/_. En el [Fabfile](https://github.com/OMGitsXupi/WikiRandom/blob/master/fabfile.py) está la configuración para que se copie el proyecto a _/tmp/wikirandom/_
+
+Para hacer los tests, en el archivo [.travis.yml](https://github.com/OMGitsXupi/WikiRandom/blob/master/.travis.yml) he añadido _fab start_ y _fab status_ para comprobar que se puede arrancar el servicio.

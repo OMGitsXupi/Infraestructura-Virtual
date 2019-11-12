@@ -16,6 +16,6 @@ Microservicio que te permitirá obtener una imagen aleatoria (en forma de link) 
 `fab test`
 
 ## :bookmark_tabs: Documentación extra
-#### [Explicaciones](explicaciones/README.md)
-- [Herramienta de construcción](explicaciones/fabric.md)
+- #### [Explicaciones](explicaciones/README.md)
+- [Servicio (gunicorn + supervisor](explicaciones/servicio.md)
 - [API REST (con tests)](explicaciones/apirest.md)
