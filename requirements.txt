@@ -2,4 +2,3 @@ pytest
 fabric3
 Flask
 gunicorn
-supervisor

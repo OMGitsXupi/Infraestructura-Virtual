@@ -1,6 +1,8 @@
 # API REST y tests
 
-Se ha creado una estructura de API REST para manejar la aplicación, por lo que se han creado las rutas que permiten usarla.
+Se ha creado una estructura de API REST para manejar la aplicación, por lo que se han creado las rutas que permiten usarla, con ayuda de _Flask_ que permite realizarlo fácilmente. Para testearlo también se ha usado la librería _unittest_
+
+## API
 Para el enrutamiento de mi clase, he barajado hacerlo con 'hug', pero como en otra asignatura hemos estado trabajando con Flask, al final me he decantado por esta opción.
 
 #### Cabecera
@@ -26,13 +28,14 @@ Ruta para comprobar disponibilidad
 def index():
 	return jsonify('{ "status": "OK" }')
 ```
-#### Obtener una imagen (link) aleatoria del array de strings
+#### Rutas funcionales para historias de usuario
+Obtener una imagen (link) aleatoria -> `/random`
 ```
 @app.route('/random')
 def random():
 	return jsonify(link = img.getRandomImage()), 200
 ```
-#### Obtener una imagen (link) mandando el ídice en la URL
+Obtener una imagen (link) concreta  -> `/get?link=[ÍNDICE]`
 ```
 @app.route('/get', methods=['GET', 'POST'])
 def getimage():
@@ -42,6 +45,19 @@ def getimage():
 			return jsonify(img.getImage(id))
 		else: return jsonify('Ruta no dispnible'), 404
 	return jsonify('{ "status": "OK" }')
+```
+Introducir una imagen (link) mediante método POST -> `/push`
+```
+@app.route('/push', methods=['POST'])
+def push():
+	if request.method == 'POST':
+		link=request.form.get('link')
+		tamanio=img.getSize()
+		img.pushImage(link)
+		if img.getSize()>tamanio:
+			return jsonify(link), 200 #Devuelve el propio link
+		else: return jsonify('No se ha podido introducir el nuevo dato'), 400
+	else: return jsonify('Ruta no dispnible'), 404
 ```
 #### Manejador de error para cualquier ruta desconocida
 ```
@@ -55,8 +71,8 @@ if __name__ == '__main__':
  app.run(debug=True)
 ```
 
-### Tests
-Para testear la api estos son las funciones. Todas se basan en recibir un código de estado (error o éxito).
+## Tests
+Para testear la api estos son las funciones. Todas se basan en recibir un código de estado (error o éxito), la propia api ya está configurada para que solo se mande el código de exito si los datos se introducen correctamente (en el '_getImage_' o en '_push_').
 ```
 from .context import my_app
 from my_app.apirest import *
@@ -65,11 +81,12 @@ import unittest
 from flask import Flask, json, jsonify
 
 class RandomTest(unittest.TestCase):
+
 	def test_status(self):
 		client = app.test_client(self)
 		response = client.get('/status')
 		self.assertEqual(response.status_code, 200)
-
+		
 	def test_random(self):
 		client = app.test_client(self)
 		response = client.get('/random')
@@ -84,6 +101,12 @@ class RandomTest(unittest.TestCase):
 		client = app.test_client(self)
 		response = client.get('/get?link=100')
 		self.assertEqual(response.status_code, 404)
+
+	def test_push(self):
+		client = app.test_client(self)
+		mydata={'link': 'cadena de prueba'}
+		response = client.post('/push?link=\'cadenadeprueba\'', data=mydata)
+		self.assertEqual(response.status_code, 200)
 
 	def test_notFound(self):
 		client = app.test_client(self)

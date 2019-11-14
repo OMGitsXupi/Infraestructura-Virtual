@@ -25,6 +25,12 @@ class RandomTest(unittest.TestCase):
 		response = client.get('/get?link=100')
 		self.assertEqual(response.status_code, 404)
 
+	def test_push(self):
+		client = app.test_client(self)
+		mydata={'link': 'cadena de prueba'}
+		response = client.post('/push?link=\'cadenadeprueba\'', data=mydata)
+		self.assertEqual(response.status_code, 200)
+
 	def test_notFound(self):
 		client = app.test_client(self)
 		response = client.get('/notfound')

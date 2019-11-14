@@ -5,12 +5,13 @@ def test():
 
 def install():
     local("pip install -r requirements.txt")
+    local("sudo apt-get install supervisor")
 
 def start():
-	local("sudo supervisorctl reload")
 	local("sudo cp -r . /tmp/wikirandom")
 	local("sudo cp wikirandom-service.conf /etc/supervisor/conf.d/")
 	local("sudo supervisorctl reread")
+	local("sudo supervisorctl reload")
 #	with settings(warn_only=True):
 #		noexiste = local("ps aux | grep 'gunicorn: worker \[wsgi:app\]'",capture=True)
 #		if noexiste.return_code == 0: 	

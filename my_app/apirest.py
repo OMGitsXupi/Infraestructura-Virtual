@@ -1,5 +1,5 @@
 from flask import Flask, jsonify, request
-from my_app.__init__ import *
+from __init__ import *
 import os
 
 app = Flask(__name__)
@@ -10,7 +10,7 @@ img = RandomImage()
 def index():
 	return jsonify('{ "status": "OK" }')
 
-@app.route('/get', methods=['GET', 'POST'])
+@app.route('/get', methods=['GET'])
 def getimage():
 	if request.method == 'GET':
 		id = int(request.args.get('link'))
@@ -18,6 +18,17 @@ def getimage():
 			return jsonify(img.getImage(id))
 		else: return jsonify('Ruta no dispnible'), 404
 	return jsonify('{ "status": "OK" }')
+
+@app.route('/push', methods=['POST'])
+def push():
+	if request.method == 'POST':
+		link=request.form.get('link')
+		tamanio=img.getSize()
+		img.pushImage(link)
+		if img.getSize()>tamanio:
+			return jsonify(link), 200 #Devuelve el propio link
+		else: return jsonify('No se ha podido introducir el nuevo dato'), 400
+	else: return jsonify('Ruta no dispnible'), 404
 
 @app.route('/random')
 def random():
