@@ -7,9 +7,11 @@ def install():
     local("pip install -r requirements.txt")
     local("sudo apt-get install supervisor")
 
-def start():
+def build():	
 	local("sudo cp -r . /tmp/wikirandom")
 	local("sudo cp wikirandom-service.conf /etc/supervisor/conf.d/")
+
+def start():
 	local("sudo supervisorctl reread")
 	local("sudo supervisorctl reload")
 #	with settings(warn_only=True):

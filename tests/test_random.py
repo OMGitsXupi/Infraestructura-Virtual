@@ -1,5 +1,5 @@
 from .context import my_app
-from my_app.__init__ import *
+from my_app.wikirandom import *
 
 def test_get_image():
 	imagen=RandomImage()

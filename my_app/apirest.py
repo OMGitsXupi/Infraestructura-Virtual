@@ -1,5 +1,5 @@
 from flask import Flask, jsonify, request
-from my_app.__init__ import *
+from wikirandom import *
 import os
 
 app = Flask(__name__)
