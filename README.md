@@ -17,7 +17,9 @@ Microservicio que te permitirá obtener una imagen aleatoria (en forma de link) 
 
 ## :books: Documentación extra
 buildtool: fabfile.py
+
 Despliegue: https://xupi.herokuapp.com
+
 - #### [Explicaciones](explicaciones/README.md)
 - [Servicio (gunicorn + supervisor)](explicaciones/servicio.md)
 - [API REST (con tests)](explicaciones/apirest.md)
