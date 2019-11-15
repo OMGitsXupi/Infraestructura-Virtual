@@ -7,7 +7,7 @@ Primero tendremos que crearnos una cuenta en [Google Cloud](https://cloud.google
 Siguiendo esta [guía](https://console.cloud.google.com/appengine/start) proporcionada por Google, y en base a este [proyecto de ejemplo](https://github.com/GoogleCloudPlatform/python-docs-samples/blob/master/appengine/standard_python37/hello_world) hemos podido configurar el servicio. 
 
 En el directorio de nuestra aplicación (ya configurado con _gunicorn_ y _flask_) tendremos que usar el SDK de Google Cloud. Este se puede instalar fácilmente con `sudo snap install google-cloud-sdk --classic`
-Hemos creado un archivo llamado [app.yaml]() que en este caso va a usar gunicorn para desplegar nuestra aplicación y contendrá lo siguiente:
+Hemos creado un archivo llamado [app.yaml](https://github.com/OMGitsXupi/WikiRandom/blob/master/app.yaml) que en este caso va a usar gunicorn para desplegar nuestra aplicación y contendrá lo siguiente:
 ```
 #app.yaml - para Google App Engine
 runtime: python37

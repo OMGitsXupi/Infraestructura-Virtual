@@ -15,8 +15,10 @@ Microservicio que te permitirá obtener una imagen aleatoria (en forma de link) 
 #### Testear (desarrollo)
 `fab test`
 
-## :bookmark_tabs: Documentación extra
+## :books: Documentación extra
 buildtool: fabfile.py
 - #### [Explicaciones](explicaciones/README.md)
-- [Servicio (gunicorn + supervisor](explicaciones/servicio.md)
+- [Servicio (gunicorn + supervisor)](explicaciones/servicio.md)
 - [API REST (con tests)](explicaciones/apirest.md)
+- [Despliegue en Heroku](heroku.md)
+- [Despliegue en Google App Engine](GoogleAppEngine.md)

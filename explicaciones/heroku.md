@@ -2,7 +2,7 @@
 
 A continuación voy a detallar los pasos para que se haya podido desplegar el servicio en un PaaS (Platform as a Service) para que sea más accesible. En este caso hemos escogido Heroku por su eficacia al configurar la aplicación y su alta disponibilidad (además de que qeu ofrece un buen plan gratuito.
 Primero nos hemos creado una cuenta en [Heroku](https://cloud.google.com/) y la hemos conectado con GitHub.
-Lo esencial para que se pueda desplegar nuestra aplicación es crear un archivo llamado [Procfile]() que va a usar gunicorn.
+Lo esencial para que se pueda desplegar nuestra aplicación es crear un archivo llamado [Procfile](https://github.com/OMGitsXupi/WikiRandom/blob/master/Procfile) que va a usar gunicorn.
 ```
 web: gunicorn --chdir my_app wsgi:app
 ```
