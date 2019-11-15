@@ -1,0 +1,3 @@
+#app.yaml - para Google App Engine
+runtime: python37
+entrypoint: gunicorn --chdir my_app wsgi:app

@@ -8,7 +8,7 @@ img = RandomImage()
 
 @app.route('/')
 def index():
-	return jsonify('{ "status": "OK" }')
+	return jsonify('Bienvenido a WikiRandom')
 
 @app.route('/get', methods=['GET'])
 def getimage():
