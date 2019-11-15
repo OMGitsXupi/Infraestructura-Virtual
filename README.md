@@ -15,9 +15,6 @@ Microservicio que te permitirá obtener una imagen aleatoria (en forma de link) 
 #### Testear (desarrollo)
 `fab test`
 
-#### [Servicio desplegado en Heroku](https://wikirandom.appspot.com/)
-#### [Servicio desplegado en Google App Engine](https://xupi.herokuapp.com/)
-
 ## :books: Documentación extra
 buildtool: fabfile.py
 
