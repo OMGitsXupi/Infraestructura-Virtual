@@ -20,5 +20,5 @@ buildtool: fabfile.py
 - #### [Explicaciones](explicaciones/README.md)
 - [Servicio (gunicorn + supervisor)](explicaciones/servicio.md)
 - [API REST (con tests)](explicaciones/apirest.md)
-- [Despliegue en Heroku](heroku.md)
-- [Despliegue en Google App Engine](GoogleAppEngine.md)
+- [Despliegue en Heroku](explicaciones/heroku.md)
+- [Despliegue en Google App Engine](explicaciones/GoogleAppEngine.md)
