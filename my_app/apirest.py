@@ -36,7 +36,7 @@ def random():
 
 @app.route('/status')
 def status():
-	return jsonify('{ "status": "OK" }')
+	return jsonify(status='OK')
 
 @app.errorhandler(404)
 def page_not_found(error):
