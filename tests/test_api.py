@@ -1,6 +1,6 @@
 from .context import my_app
 from my_app.apirest import *
-from my_app.wikirandom import *
+from my_app import *
 import unittest
 from flask import Flask, json, jsonify
 
