@@ -14,10 +14,15 @@ runtime: python37
 entrypoint: gunicorn --chdir my_app wsgi:app
 ```
 Ahora podremos seguir [estos pasos](https://console.cloud.google.com/appengine/start) seleccionando nuestro proyecto.
+
 ![paso 1](gcloudapp1.png)
+
 ![paso 2](gcloudapp2.png)
+
 ![paso 3](gcloudapp3.png)
 
 Con todo esto ya hemos podido hacer `gcloud init` para iniciar sesión en Google Cloud, y, posteriormente, `gcloud app deploy` para que se lance el proyecto.
+
 ![paso 3](gcloudapp4.png)
+
 Se creará un archivo _.gcloudignore_ que equivaldrá a [_.gitignore_](https://github.com/OMGitsXupi/WikiRandom/blob/master/.gitignore) (pondremos lo que no queremos que tenga en cuenta)
