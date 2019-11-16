@@ -23,7 +23,11 @@ def getimage():
 		if id>=0 and id<img.getSize():
 			return jsonify(img.getImage(id))
 		else: return jsonify(dataerr), 404
-	return jsonify(status='OK')
+	else return return jsonify({
+				  "error": {
+					"code": 404,
+					"message": "Método no disponible"
+				  }}), 404
 
 @app.route('/push', methods=['POST'])
 def push():
@@ -33,7 +37,11 @@ def push():
 		img.pushImage(link)
 		if img.getSize()>tamanio:
 			return jsonify(link), 200 #Devuelve el propio link
-		else: return jsonify('No se ha podido introducir el nuevo dato'), 400
+		else: return jsonify({
+			  "error": {
+				"code": 400,
+				"message": "No se ha podido introducir el dato"
+			  }}), 400
 	else: return jsonify(dataerr), 404
 
 @app.route('/random')
@@ -46,7 +54,7 @@ def status():
 
 @app.errorhandler(404)
 def page_not_found(error):
-    	return jsonify(dataerr), 404
+	return jsonify(dataerr), 404
 
 if __name__ == '__main__':
  	app.run(debug=True)
