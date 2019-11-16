@@ -20,13 +20,13 @@ Ruta por defecto sin funcionalidad
 ```
 @app.route('/')
 def index():
-	return jsonify('{ "status": "OK" }')
+	return jsonify(status='OK')
 ```
 Ruta para comprobar disponibilidad
 ```
 @app.route('/status')
 def index():
-	return jsonify('{ "status": "OK" }')
+	return jsonify(status='OK')
 ```
 #### Rutas funcionales para historias de usuario
 Obtener una imagen (link) aleatoria -> `/random`
@@ -37,14 +37,14 @@ def random():
 ```
 Obtener una imagen (link) concreta  -> `/get?link=[ÍNDICE]`
 ```
-@app.route('/get', methods=['GET', 'POST'])
+@app.route('/get', methods=['GET'])
 def getimage():
 	if request.method == 'GET':
 		id = int(request.args.get('link'))
 		if id>=0 and id<img.getSize():
 			return jsonify(img.getImage(id))
-		else: return jsonify('Ruta no dispnible'), 404
-	return jsonify('{ "status": "OK" }')
+		else: return jsonify(message='Ruta no dispnible'), 404
+	else: return jsonify(message='Método no disponible'), 400
 ```
 Introducir una imagen (link) mediante método POST -> `/push`
 ```
@@ -56,19 +56,19 @@ def push():
 		img.pushImage(link)
 		if img.getSize()>tamanio:
 			return jsonify(link), 200 #Devuelve el propio link
-		else: return jsonify('No se ha podido introducir el nuevo dato'), 400
-	else: return jsonify('Ruta no dispnible'), 404
+		else: return jsonify(message='No se ha podido introducir'), 400
+	else: return jsonify(message='Ruta no dispnible'), 404
 ```
 #### Manejador de error para cualquier ruta desconocida
 ```
 @app.errorhandler(404)
 def page_not_found(error):
-    return jsonify('Ruta no dispnible'), 404
+	return jsonify(message='Ruta no dispnible'), 404
 ```
 #### Configuración para crear servicio
 ```
 if __name__ == '__main__':
- app.run(debug=True)
+ 	app.run(debug=True)
 ```
 
 ## Tests
