@@ -5,12 +5,6 @@ import os
 app = Flask(__name__)
 #Se crea una instancia de la clase original		
 img = RandomImage()
-dataerr={
-	  "error": {
-	    "code": 404,
-	    "message": "Ruta no dispnible"
-	  }
-	}
 
 @app.route('/')
 def index():
@@ -23,7 +17,7 @@ def getimage():
 		if id>=0 and id<img.getSize():
 			return jsonify(img.getImage(id))
 		else: return jsonify(message='Ruta no dispnible'), 404
-	else return return jsonify(message='Método no disponible'), 400
+	else return jsonify(message='Método no disponible'), 400
 
 @app.route('/push', methods=['POST'])
 def push():
