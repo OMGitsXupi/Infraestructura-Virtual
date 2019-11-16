@@ -17,7 +17,6 @@ def getimage():
 		if id>=0 and id<img.getSize():
 			return jsonify(img.getImage(id))
 		else: return jsonify(message='Ruta no dispnible'), 404
-	else: return jsonify(message='Método no disponible'), 400
 
 @app.route('/push', methods=['POST'])
 def push():
