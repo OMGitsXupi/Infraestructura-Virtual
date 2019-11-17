@@ -11,7 +11,7 @@ Hemos creado un archivo llamado [app.yaml](https://github.com/OMGitsXupi/WikiRan
 ```
 #app.yaml - para Google App Engine
 runtime: python37
-entrypoint: gunicorn --chdir my_app wsgi:app
+entrypoint: fab gunicornPaaS
 ```
 Ahora podremos seguir [estos pasos](https://console.cloud.google.com/appengine/start) seleccionando nuestro proyecto.
 
