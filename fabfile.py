@@ -30,5 +30,8 @@ def restart():
 def status(): #Estado del servicio
 	local("sudo supervisorctl status wikirandom")
 
+def gunicornPaaS()
+	local("gunicorn --chdir my_app wsgi:app")
+
 #def kill():
 	#local("kill -9 $(ps aux | grep 'gunicorn: master \[wsgi:app\]' | awk '{print $2}')")

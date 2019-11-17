@@ -10,4 +10,9 @@ Para poder usar Heroku tendremos que tener su herramienta de línea de órdenes,
 Una vez hecho esto hemos iniciado sesión con `heroku login`
 Tras esto nos hemos movido al directorio de nuestro proyecto, y hemos ejecutado `heroku create xupi` para crear una aplicación llamada _xupi_ aunque se puede poner cualquier otro nombre o incluso ninguno y se pondrá uno automático. A continuación para subir nuestra aplicación a Heroku he usado `git push heroku master` y, para asegurarnos de que se cree una instancia: `heroku ps:scale web=1`
 Ahora con `heroku open` se nos abrirá la [aplicación](https://xupi.herokuapp.com/) en el navegador.
-En el _dashboard_ de _Heroku_ podremos crear un _pipeline_, que tendremos que sincronizar con GitHub para que la aplicación se actualice con cada push a git en vez de tener que usar `git push heroku master` continuamente.
+
+En el _dashboard_ de _Heroku_ podremos crear un _pipeline_, que tendremos que sincronizar con un repositorio de GitHub para que la aplicación se actualice con cada push a git en vez de tener que usar `git push heroku master` continuamente.
+
+Concretamente se hace en el apartado _deploy_ de la app de Heroku. Y quedaría tal que así:
+
+![https://dashboard.heroku.com/apps/xupi/deploy](herokuPipe.png)

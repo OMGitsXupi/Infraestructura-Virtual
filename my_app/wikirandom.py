@@ -9,12 +9,11 @@ class RandomImage:
 		return self.links
 
 	def getRandomImage(self):
-		i=random.randint(0,2)
+		i=random.randint(self.getSize())
 		return self.links[i]
 
 	def pushImage(self,link):
 		self.links.append(link)
-		return 0
 
 	def getImage(self,i):
 		return self.links[i]
