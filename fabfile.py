@@ -30,7 +30,7 @@ def restart():
 def status(): #Estado del servicio
 	local("sudo supervisorctl status wikirandom")
 
-def gunicornPaaS()
+def gunicornPaaS():
 	local("gunicorn --chdir my_app wsgi:app")
 
 #def kill():
