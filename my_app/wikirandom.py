@@ -14,6 +14,7 @@ class RandomImage:
 
 	def pushImage(self,link):
 		self.links.append(link)
+		return 0
 
 	def getImage(self,i):
 		return self.links[i]
