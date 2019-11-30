@@ -1,0 +1,11 @@
+# docker-compose.yml
+version: '2'
+
+services:
+   wikirandom:
+      build:
+        context: .
+        dockerfile: flask_dockerfile
+      volumes:
+        - .:/usr/src/wikirandom
+      working_dir: /usr/src/wikirandom
