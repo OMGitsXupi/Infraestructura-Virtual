@@ -14,6 +14,8 @@ Microservicio que te permitirá obtener una imagen aleatoria (en forma de link) 
 `fab restart`
 #### Testear (desarrollo)
 `fab test`
+#### Descargar imagen
+`docker pull omgitsxupi/wikirandom`
 
 ## :books: Documentación extra
 buildtool: fabfile.py
@@ -22,8 +24,13 @@ Despliegue: https://xupi.herokuapp.com
 
 Despliegue 2: https://wikirandom.appspot.com
 
+Contenedor: https://xupi-docker.herokuapp.com
+
+DockerHub: https://hub.docker.com/repository/docker/omgitsxupi/wikirandom
+
 - #### [Explicaciones](explicaciones/README.md)
 - [Servicio (gunicorn + supervisor)](explicaciones/servicio.md)
 - [API REST (con tests)](explicaciones/apirest.md)
 - [Despliegue en Heroku](explicaciones/heroku.md)
 - [Despliegue en Google App Engine](explicaciones/GoogleAppEngine.md)
+- [Despliegue usando contenedores](explicaciones/docker.md)

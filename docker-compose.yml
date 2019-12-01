@@ -5,7 +5,7 @@ services:
    wikirandom:
       build:
         context: .
-        dockerfile: flask_dockerfile
+        dockerfile: Dockerfile
       volumes:
         - .:/usr/src/wikirandom
       working_dir: /usr/src/wikirandom
