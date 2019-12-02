@@ -19,7 +19,7 @@ COPY . /usr/src/wikirandom   # Copiamos todo lo demás
 CMD fab gunicornPaaS   # Órden para arrancar el microservicio (usando la herramienta de construcción)
 ```
 Apuntes sobre el Dockerfile:
-- Se usa la imagen _slim-buster_ porque es más ligera que las imágenes por defecto, aunque no tanto como _alpine_, pero según me he informado, _alpine_ por sí sola no es del todo capaz de realizar algunas tareas con Python, así que he optado por esta para que funcione completamente sin tener que modificar nada.
+- Se usa la imagen _slim-buster_ porque es más ligera que las imágenes por defecto, aunque no tanto como _alpine_, pero según me he informado, _alpine_ por sí sola no es del todo capaz de realizar algunas tareas con Python, así que he optado por esta para que funcione completamente sin tener que modificar nada (recomendada [aquí](https://pythonspeed.com/articles/base-image-python-docker-images/)).
 - Para desplegar (en CMD) se usa la misma órden que en los PaaS porque únicamente ejecuta una línea de _gunicorn_, siendo igual a lo que se usa en este contenedor.
 
 Para poder desplegar el contenedor en mi máquina y ver si funciona realmente, me he ayudado de un archivo llamado  [_docker-compose.yml_](https://github.com/GoogleCloudPlatform/appengine-custom-runtimes-samples/blob/master/nginx/docker-compose.yml) que contiene lo siguiente:
