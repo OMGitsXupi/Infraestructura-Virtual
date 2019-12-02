@@ -22,11 +22,11 @@ buildtool: fabfile.py
 
 Despliegue: https://xupi.herokuapp.com
 
-Despliegue 2: https://wikirandom.appspot.com
+Despliegue 2 (ahora usando docker): https://wikirandom.appspot.com
 
 Contenedor: https://xupi-docker.herokuapp.com
 
-DockerHub: https://hub.docker.com/repository/docker/omgitsxupi/wikirandom
+DockerHub: https://hub.docker.com/r/omgitsxupi/wikirandom
 
 - #### [Explicaciones](explicaciones/README.md)
 - [Servicio (gunicorn + supervisor)](explicaciones/servicio.md)
