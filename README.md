@@ -28,6 +28,8 @@ Contenedor: https://xupi-docker.herokuapp.com
 
 DockerHub: https://hub.docker.com/r/omgitsxupi/wikirandom
 
+Provision: playbook.yml
+
 - #### [Explicaciones](explicaciones/README.md)
 - [Servicio (gunicorn + supervisor)](explicaciones/servicio.md)
 - [API REST (con tests)](explicaciones/apirest.md)
