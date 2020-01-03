@@ -1,0 +1,31 @@
+- name: wikirandom
+  hosts: all # Se ejecutará para todas las direcciones de ansible_hosts
+  become: true # Para tener permisos de root en todas las tareas
+  tasks: # Tareas (pasos a seguir que se ejecutarán por orden)
+
+    - name: instalar pip
+      apt: name=python3-pip state=present update_cache=yes
+
+    - name: instalar supervisord
+      command: pip3 install supervisor
+
+    - name: instalar git
+      apt: name=git state=present
+
+    - name: repositorio
+      git:
+        repo: https://github.com/OMGitsXupi/WikiRandom.git
+        dest: wikirandom/
+
+   # A continuación vienen las instalaciones que están en requeriments.txt
+    - name: instalar fabric
+      command: pip3 install fabric3
+
+    - name: instalar pytest
+      command: pip3 install pytest
+
+    - name: instalar flask
+      command: pip3 install Flask
+
+    - name: instalar gunicorn
+      command: pip3 install gunicorn

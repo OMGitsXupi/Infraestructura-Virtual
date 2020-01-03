@@ -34,3 +34,4 @@ DockerHub: https://hub.docker.com/r/omgitsxupi/wikirandom
 - [Despliegue en Heroku](explicaciones/heroku.md)
 - [Despliegue en Google App Engine](explicaciones/GoogleAppEngine.md)
 - [Despliegue usando contenedores](explicaciones/docker.md)
+- [Provisionamiendo de máquina virtual](explicaciones/provisionamiento.md)

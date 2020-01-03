@@ -35,3 +35,6 @@ def gunicornPaaS():
 
 #def kill():
 	#local("kill -9 $(ps aux | grep 'gunicorn: master \[wsgi:app\]' | awk '{print $2}')")
+
+def provisionar():
+	local("ansible-playbook playbook.yml")
